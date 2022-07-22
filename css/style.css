@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+h1, p {
+    margin: 0;
+}
+
+.perfume{
+    color: var(--Dark-grayish-blue);
+}
+.gabrielle__essence {
+    color: var(--Very-dark-blue);
+}
+
+p,.cancel {
+    color: var(--Dark-grayish-blue);
+}
+
+span{
+    color: var(--Dark-cyan);
+}
+
+
+
+button {
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+body {
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+   
+ 
+}
+
+
+
+.mobile {
+    display: none;
+}
+
+.container{
+    background-color: var(--White);
+    max-width: 400px;
+    
+    
+    
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.wrapper__images{
+    height: 100%;
+}
+
+.wrapper__images .desktop {
+    height: 300px;
+    width: fit-content;
+}
+
+.perfume, .gabrielle__essence {
+    text-transform: uppercase;
+}
+
+.wrapper__content .perfume{
+    font-size: .7em;
+    font-weight: 500;
+    opacity: .5;
+    
+}
+
+.wrapper__content .gabrielle__essence {
+    font-size: 1em;
+    font-weight: 700;
+    
+}
+
+.wrapper__content {
+    padding: 20px 8px;
+}
+
+.wrapper__content p {
+    font-size: .7em;
+}
+
+span {
+    font-size: .9em;
+    font-weight: 700;
+}
+
+.cancel{
+    font-size: .6em;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+
+
+
+
+@media (max-width: 48em){
+    .desktop{
+        display: none;
+    }
+
+    .wrapper__images  .mobile {
+        display: block;
+        height: 100%;
+
+       
+        
+    }
+
+    .container{
+        max-width: 350px;
+    }
+
+    .wrapper {
+       grid-template-columns: repeat(1,1fr);
+    }   
+
+    
+
+}
