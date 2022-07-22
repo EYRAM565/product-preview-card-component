@@ -33,12 +33,6 @@ span{
 
 
 
-button {
-    border: none;
-    background-color: var(--Dark-cyan);
-    color: var(--White);
-    font: inherit;
-}
 
 img {
     display: block;
@@ -59,12 +53,15 @@ body {
 
 
 .mobile {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: none;
 }
 
 .container{
     background-color: var(--White);
-    max-width: 400px;
+    border-radius: 10px;
+    max-width: 580px;
     
     
     
@@ -72,7 +69,8 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: max-content auto auto;
+    gap: 10px;
 }
 
 .wrapper__images{
@@ -80,46 +78,78 @@ body {
 }
 
 .wrapper__images .desktop {
-    height: 300px;
-    width: fit-content;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+    max-width: 300px;
 }
 
-.perfume, .gabrielle__essence {
-    text-transform: uppercase;
+.wrapper__content {
+    padding: 20px 15px;
 }
+
 
 .wrapper__content .perfume{
     font-size: .7em;
-    font-weight: 500;
+    font-weight: 700;
+    letter-spacing: 7px;
+    padding-top: 10px;
     opacity: .5;
+    text-transform: uppercase;
     
 }
 
 .wrapper__content .gabrielle__essence {
-    font-size: 1em;
+    font-size: 1.8em;
     font-weight: 700;
+    line-height: 29px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
     
 }
 
-.wrapper__content {
-    padding: 20px 8px;
-}
 
 .wrapper__content p {
-    font-size: .7em;
+    font-size: .9em;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 20px;
 }
 
-span {
-    font-size: .9em;
+.figs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.cur{
+    font-size: 1.8em;
     font-weight: 700;
 }
 
 .cancel{
-    font-size: .6em;
+    font-size: .8em;
     font-weight: 500;
     text-decoration: line-through;
+    
 }
 
+
+ .button {
+    border: none;
+    background-color: var(--Dark-cyan);
+    border-radius: 14px;
+    color: var(--White);
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: .8em;
+    font-weight: 500;
+    margin-top: 30px;
+    padding: 18px 40px;
+}
 
 
 
@@ -144,7 +174,39 @@ span {
     .wrapper {
        grid-template-columns: repeat(1,1fr);
     }   
+    
 
+    .wrapper__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        
+    }
+     
+    .wrapper__content .perfume {
+        padding-left: 10px;
+    }
+
+    .wrapper__content .gabrielle__essence {
+        padding-left: 15px;
+    }
+
+    .wrapper__content p {
+        padding-left: 16px;
+    }
+
+    .figs {
+         padding-bottom: 20px;
+         padding-left: 15px;
+         
+    }
+
+    .button{
+        
+        margin: 0 auto;
+        padding: 15px 100px;
+    }
     
 
 }
