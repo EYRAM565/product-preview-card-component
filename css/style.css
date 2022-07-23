@@ -93,7 +93,7 @@ body {
     font-weight: 700;
     letter-spacing: 7px;
     padding-top: 10px;
-    opacity: .5;
+    opacity: .7;
     text-transform: uppercase;
     
 }
@@ -144,13 +144,25 @@ body {
     font: inherit;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 7px;
-    font-size: .8em;
+    font-size: .9em;
     font-weight: 500;
     margin-top: 30px;
     padding: 18px 40px;
 }
 
+.button img{
+    height: 14px;
+    width: 14px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 76%, 10%);
+    font-weight: 700;
+    /* transition: all 1s ease-in-out; */
+}
 
 
 
@@ -161,9 +173,8 @@ body {
 
     .wrapper__images  .mobile {
         display: block;
-        height: 100%;
-
-       
+        height: 100%;  
+        max-width: 350px;
         
     }
 
@@ -185,20 +196,23 @@ body {
     }
      
     .wrapper__content .perfume {
-        padding-left: 10px;
+        padding-left: 12px;
     }
 
     .wrapper__content .gabrielle__essence {
         padding-left: 15px;
+        padding-top: 15px;
     }
 
     .wrapper__content p {
         padding-left: 16px;
+        padding-top: 10px;
     }
 
     .figs {
          padding-bottom: 20px;
          padding-left: 15px;
+         padding-top: 15px;
          
     }
 
@@ -208,5 +222,32 @@ body {
         padding: 15px 100px;
     }
     
+
+}
+
+@media (max-width: 20em){
+    .container {
+        max-width: 270px;
+    }
+
+    .wrapper__images .mobile {
+        max-width: 270px;
+    }
+
+    .wrapper__content{
+        padding-left: 8px;
+    }
+
+    .wrapper__content .gabrielle__essence{
+        font-size: 1.5em;
+    }
+
+    .figs{
+        padding-left: 20px;
+    }
+
+    .button {
+        padding: 15px 60px;
+    }
 
 }
